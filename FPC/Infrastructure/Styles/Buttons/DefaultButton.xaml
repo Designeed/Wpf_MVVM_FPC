@@ -4,10 +4,10 @@
     <Style x:Key="DefaultButton" TargetType="Button">
         <Setter Property="FontFamily" Value="{StaticResource BaseFont}"/>
         <Setter Property="Foreground" Value="{DynamicResource WhiteBlackBrush}"/>
-        <Setter Property="Background" Value="{DynamicResource GreenBrush}"/>
         <Setter Property="FontSize" Value="30"/>
         <Setter Property="FontWeight" Value="Regular"/>
-        <Setter Property="Template" x:Name="DefaulteTemplate">
+        <Setter Property="Background" Value="{DynamicResource GreenBrush}"/>
+        <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Border 
