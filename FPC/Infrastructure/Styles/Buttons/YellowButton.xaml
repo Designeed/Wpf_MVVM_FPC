@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Style x:Key="YellowButton" TargetType="Button" BasedOn="{StaticResource DefaultButton}">
-        <Setter Property="Background" Value="{StaticResource YellowBrush}"/>
+        <Setter Property="Background" Value="{DynamicResource YellowBrush}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -10,7 +10,7 @@
                         x:Name="Border"
                         CornerRadius="35"
                         BorderThickness="1"
-                        BorderBrush="{StaticResource WhiteBlackBrush}"
+                        BorderBrush="{DynamicResource WhiteBlackBrush}"
                         Background="{TemplateBinding Background}">
                         <ContentPresenter
                             HorizontalAlignment="Center"
@@ -19,13 +19,13 @@
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsDefaulted" Value="true">
-                            <Setter Property="Background" Value="{StaticResource YellowBrush}"/>
+                            <Setter Property="Background" Value="{DynamicResource YellowBrush}"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Background" Value="{StaticResource YellowFocuseBrush}"/>
+                            <Setter Property="Background" Value="{DynamicResource YellowFocuseBrush}"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="true">
-                            <Setter Property="Background" Value="{StaticResource YellowBrush}" />
+                            <Setter Property="Background" Value="{DynamicResource YellowBrush}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

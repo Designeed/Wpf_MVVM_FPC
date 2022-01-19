@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Style x:Key="RedButton" TargetType="Button" BasedOn="{StaticResource DefaultButton}">
-        <Setter Property="Background" Value="{StaticResource RedBrush}"/>
+        <Setter Property="Background" Value="{DynamicResource RedBrush}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -10,7 +10,7 @@
                         x:Name="Border"
                         CornerRadius="35"
                         BorderThickness="1"
-                        BorderBrush="{StaticResource WhiteBlackBrush}"
+                        BorderBrush="{DynamicResource WhiteBlackBrush}"
                         Background="{TemplateBinding Background}">
                         <ContentPresenter
                             HorizontalAlignment="Center"
@@ -19,13 +19,13 @@
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsDefaulted" Value="true">
-                            <Setter Property="Background" Value="{StaticResource RedBrush}"/>
+                            <Setter Property="Background" Value="{DynamicResource RedBrush}"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Background" Value="{StaticResource RedFocuseBrush}"/>
+                            <Setter Property="Background" Value="{DynamicResource RedFocuseBrush}"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="true">
-                            <Setter Property="Background" Value="{StaticResource RedBrush}" />
+                            <Setter Property="Background" Value="{DynamicResource RedBrush}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

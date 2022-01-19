@@ -3,8 +3,8 @@
     
     <Style x:Key="DefaultButton" TargetType="Button">
         <Setter Property="FontFamily" Value="{StaticResource BaseFont}"/>
-        <Setter Property="Foreground" Value="{StaticResource WhiteBlackBrush}"/>
-        <Setter Property="Background" Value="{StaticResource GreenBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource WhiteBlackBrush}"/>
+        <Setter Property="Background" Value="{DynamicResource GreenBrush}"/>
         <Setter Property="FontSize" Value="30"/>
         <Setter Property="FontWeight" Value="Regular"/>
         <Setter Property="Template" x:Name="DefaulteTemplate">
@@ -14,7 +14,7 @@
                         x:Name="Border"
                         CornerRadius="20"
                         BorderThickness="1"
-                        BorderBrush="{StaticResource WhiteBlackBrush}"
+                        BorderBrush="{DynamicResource WhiteBlackBrush}"
                         Background="{TemplateBinding Background}">
                         <ContentPresenter
                             HorizontalAlignment="Center"
@@ -23,13 +23,13 @@
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsDefaulted" Value="true">
-                            <Setter Property="Background" Value="{StaticResource GreenBrush}"/>
+                            <Setter Property="Background" Value="{DynamicResource GreenBrush}"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Background" Value="{StaticResource GreenFocuseBrush}"/>
+                            <Setter Property="Background" Value="{DynamicResource GreenFocuseBrush}"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="true">
-                            <Setter Property="Background" Value="{StaticResource GreenBrush}" />
+                            <Setter Property="Background" Value="{DynamicResource GreenBrush}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
