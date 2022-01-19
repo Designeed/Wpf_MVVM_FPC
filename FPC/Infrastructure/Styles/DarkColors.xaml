@@ -13,14 +13,20 @@
     <SolidColorBrush x:Key="GreenBrush" Color="#008B3C"/>
     <Color x:Key="GreenColor">#008B3C</Color>
 
-    <SolidColorBrush x:Key="FocuseBrush" Color="#017B36"/>
-    <Color x:Key="FocuseColor">#017B36</Color>
-
     <SolidColorBrush x:Key="YellowBrush" Color="#B7B100"/>
     <Color x:Key="YellowColor">#B7B100</Color>
 
     <SolidColorBrush x:Key="RedBrush" Color="#850000"/>
     <Color x:Key="RedColor">#850000</Color>
+
+    <SolidColorBrush x:Key="GreenFocuseBrush" Color="#017B36"/>
+    <Color x:Key="GreenFocuseColor">#017B36</Color>
+
+    <SolidColorBrush x:Key="YellowFocuseBrush" Color="#A29D00"/>
+    <Color x:Key="YellowFocuseColor">#A29D00</Color>
+
+    <SolidColorBrush x:Key="RedFocuseBrush" Color="#710000"/>
+    <Color x:Key="RedFocuseColor">#710000</Color>
 
     <SolidColorBrush x:Key="WhiteBlackBrush" Color="#FFFFFF"/>
     <Color x:Key="WhiteBlackColor">#FFFFFF</Color>
