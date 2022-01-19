@@ -7,10 +7,13 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Infrastructure\Styles\LightColors.xaml"/>
+                <ResourceDictionary Source="Infrastructure\Styles\Themes\LightColors.xaml"/>
                 <ResourceDictionary Source="Infrastructure\Styles\Fonts.xaml"/>
-                <ResourceDictionary Source="Infrastructure\Styles\BuyButton.xaml"/>
                 <ResourceDictionary Source="Infrastructure\Styles\Icons.xaml"/>
+
+                <ResourceDictionary Source="Infrastructure\Styles\Buttons\DefaultButton.xaml"/>
+                <ResourceDictionary Source="Infrastructure\Styles\Buttons\YellowButton.xaml"/>
+                <ResourceDictionary Source="Infrastructure\Styles\Buttons\RedButton.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
