@@ -21,7 +21,12 @@
                                 <ColumnDefinition Width="60"/>
                             </Grid.ColumnDefinitions>
                             <ScrollViewer x:Name="PART_ContentHost" VerticalAlignment="Center" Margin="30, 0, 0, 0" Grid.Column="0"/>
-                            <Button Style="{StaticResource ImageButton}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, 0, 10, 0" Grid.Column="1">
+                            <Button Style="{StaticResource ImageButton}"
+                                    Content="{StaticResource Search}"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    Margin="0, 0, 10, 0"
+                                    Grid.Column="1">
                             </Button>
                         </Grid>
                     </Border>
