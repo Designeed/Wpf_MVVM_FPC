@@ -28,8 +28,28 @@
                                     Margin="0, 0, 10, 0"
                                     Grid.Column="1">
                             </Button>
+                            <TextBlock
+                                x:Name="hint"
+                                VerticalAlignment="Center"
+                                Background="{DynamicResource BackgroundMainBrush}"
+                                FontSize="40"
+                                Foreground="{DynamicResource WhiteBlackBrush}"
+                                IsHitTestVisible="False"
+                                Text="Поиск"
+                                TextAlignment="Left"
+                                Visibility="Collapsed"
+                                Margin="30, 0, 0, 0"/>
                         </Grid>
                     </Border>
+
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Text" Value=""/>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="hint" Property="Visibility" Value="Visible"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
