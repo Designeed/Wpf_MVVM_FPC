@@ -4,11 +4,11 @@
     <SolidColorBrush x:Key="PageBrush" Color="#F2F2F2"/>
     <Color x:Key="PageColor">#F2F2F2</Color>
 
-    <SolidColorBrush x:Key="BackgroundBrush" Color="#CCCCCC"/>
-    <Color x:Key="BackgroundColor">#CCCCCC</Color>
-
     <SolidColorBrush x:Key="BackgroundMainBrush" Color="#EBEBEB"/>
     <Color x:Key="BackgroundMainColor">#EBEBEB</Color>
+
+    <SolidColorBrush x:Key="BackgroundElementsBrush" Color="#CCCCCC"/>
+    <Color x:Key="BackgroundElementsColor">#CCCCCC</Color>
 
     <SolidColorBrush x:Key="GreenBrush" Color="#AEFFD1"/>
     <Color x:Key="GreenColor">#AEFFD1</Color>
