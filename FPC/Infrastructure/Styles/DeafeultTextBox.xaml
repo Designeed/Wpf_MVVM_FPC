@@ -33,7 +33,7 @@
                                 VerticalAlignment="Center"
                                 Background="{DynamicResource BackgroundMainBrush}"
                                 FontSize="40"
-                                Foreground="{DynamicResource WhiteBlackBrush}"
+                                Foreground="#CCCCCC"
                                 IsHitTestVisible="False"
                                 Text="Поиск"
                                 TextAlignment="Left"
