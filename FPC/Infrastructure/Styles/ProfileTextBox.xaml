@@ -1,0 +1,55 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="ProfileTextBox" TargetType="TextBox">
+        <Setter Property="FontFamily" Value="{StaticResource BaseFont}"/>
+        <Setter Property="FontSize" Value="25"/>
+        <Setter Property="FontWeight" Value="Regular"/>
+        <Setter Property="Foreground" Value="{DynamicResource WhiteBlackBrush}"/>
+        <Setter Property="Background" Value="{DynamicResource BackgroundMainBrush}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border
+                        Padding="20, 15, 20, 15"
+                        Height="90"
+                        Width="390"
+                        CornerRadius="20"
+                        BorderThickness="1"
+                        BorderBrush="{DynamicResource WhiteBlackBrush}"
+                        Background="{TemplateBinding Background}">
+
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock x:Name="title" Text="Заголовок" FontSize="20" FontWeight="Light"/>
+                            <Grid>
+                                <ScrollViewer x:Name="PART_ContentHost" VerticalAlignment="Center"/>
+
+                                <TextBlock
+                                x:Name="hint"
+                                VerticalAlignment="Center"
+                                TextAlignment="Left"
+                                Text="Поле ввода"
+                                Foreground="#CCCCCC"
+                                IsHitTestVisible="False"
+                                Visibility="Collapsed"/>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Text" Value=""/>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="hint" Property="Visibility" Value="Visible"/>
+                        </MultiTrigger>
+
+                        <!--<DataTrigger Binding="{Binding ElementName=hint, Path=Text}">
+                            <Setter TargetName="" Property="" Value="" />
+                        </DataTrigger>-->
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
