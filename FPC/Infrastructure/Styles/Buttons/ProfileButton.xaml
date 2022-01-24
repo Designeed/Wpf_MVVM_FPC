@@ -9,7 +9,9 @@
                 <ControlTemplate TargetType="Button">
                     <Border
                         x:Name="Border"
-                        CornerRadius="50"
+                        Height="115"
+                        Width="115"
+                        CornerRadius="100"
                         BorderThickness="1"
                         Background="{DynamicResource BackgroundMainBrush}"
                         BorderBrush="{DynamicResource WhiteBlackBrush}">
