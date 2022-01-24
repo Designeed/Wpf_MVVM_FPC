@@ -21,10 +21,10 @@
     </Grid>
 
     <Grid x:Key="TypeProducte">
-        <Viewbox Margin="5" Stretch="Uniform">
+        <Viewbox Margin="1" Stretch="Uniform">
             <Grid>
                 <Path Data="M31.5,24V12A3,3,0,0,0,30,9.4l-10.5-6a3,3,0,0,0-3,0L6,9.4A3,3,0,0,0,4.5,12V24A3,3,0,0,0,6,26.595l10.5,6a3,3,0,0,0,3,0l10.5-6A3,3,0,0,0,31.5,24Z" Stroke="{StaticResource WhiteBlackBrush}"/>
-                <Path Data="M4.905,10.44,18,18.015,31.095,10.44" Stroke="{StaticResource WhiteBlackBrush}"/>
+                <Path Data="M4.905,10.44,18,18.015,31.095,10.4" Stroke="{StaticResource WhiteBlackBrush}"/>
                 <Path Data="M18,33.12V18" Stroke="{StaticResource WhiteBlackBrush}"/>
             </Grid>
         </Viewbox>
