@@ -23,8 +23,8 @@
                     FontFamily="{StaticResource BaseFont}"
                     FontSize="25"
                     FontWeight="Regular"
-                    
-                    Foreground="{DynamicResource WhiteBlackBrush}">
+                    Foreground="{DynamicResource WhiteBlackBrush}"
+                    CaretBrush="{DynamicResource WhiteBlackBrush}">
 
                     <TextBox.Template>
                         <ControlTemplate TargetType="TextBox">
