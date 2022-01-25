@@ -7,6 +7,7 @@
         <Setter Property="FontSize" Value="40"/>
         <Setter Property="FontWeight" Value="Regular"/>
         <Setter Property="Background" Value="{DynamicResource BackgroundMainBrush}"/>
+        <Setter Property="CaretBrush" Value="{DynamicResource WhiteBlackBrush}"/>
         <Setter Property="Template"> 
             <Setter.Value>
                 <ControlTemplate TargetType="TextBox">
