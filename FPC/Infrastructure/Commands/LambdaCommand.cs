@@ -18,7 +18,6 @@ namespace FPC.Infrastructure.Commands
             _CanExecute = CanExecute;
         }
 
-
         public override bool CanExecute(object parameter) => _CanExecute?.Invoke(parameter) ?? true;
 
         public override void Execute(object parameter) => _Execute(parameter);
