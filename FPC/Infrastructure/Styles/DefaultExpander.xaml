@@ -2,6 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Style x:Key="ExpanderDownHeaderStyle" TargetType="ToggleButton">
+        <Setter Property="IsTabStop" Value="False"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ToggleButton">
@@ -9,12 +10,9 @@
                         Padding="{TemplateBinding Padding}">
                         <Grid Background="{DynamicResource BackgroundMainBrush}">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="30"/>
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="30"/>
                             </Grid.ColumnDefinitions>
-
-                            <Label Content="{StaticResource TypeProducte}" VerticalAlignment="Center" Margin="0, 3, 0, 0" Grid.Column="0"/>
 
                             <Ellipse x:Name="circle" 
                                      Stroke="{DynamicResource WhiteBlackBrush}" 
@@ -24,7 +22,7 @@
                                      Height="19" 
                                      Width="19"
                                      Margin="0,5,0,0"
-                                     Grid.Column="2"/>
+                                     Grid.Column="1"/>
 
                             <Path x:Name="arrow" 
                                   Stroke="{DynamicResource WhiteBlackBrush}" 
@@ -32,14 +30,14 @@
                                   StrokeThickness="2" 
                                   HorizontalAlignment="Center" 
                                   VerticalAlignment="Center"
-                                  Margin="0,5,0,0"
-                                  Grid.Column="2"/>
+                                  Margin="0, 5, 0, 0"
+                                  Grid.Column="1"/>
 
                             <ContentPresenter 
-                                Grid.Column="1" 
+                                Grid.Column="0" 
                                 HorizontalAlignment="Left" 
                                 VerticalAlignment="Center"
-                                Margin="4,0,0,0"/>
+                                Margin="4, 0, 0, 0"/>
                         </Grid>
                     </Border>
                     
@@ -58,7 +56,6 @@
 
     <Style x:Key="DefaultExpander" TargetType="Expander">
         <Setter Property="Foreground" Value="{DynamicResource WhiteBlackBrush}"/>
-        <Setter Property="Background" Value="{DynamicResource BackgroundMainBrush}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource WhiteBlackBrush}"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
