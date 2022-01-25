@@ -30,4 +30,8 @@
 
     <SolidColorBrush x:Key="WhiteBlackBrush" Color="#FFFFFF"/>
     <Color x:Key="WhiteBlackColor">#FFFFFF</Color>
+
+    <ImageSource x:Key="MainBackground">C:\Users\Designeed\source\repos\WPF\FPC\FPC\Infrastructure\Backgrounds\Dark\MainBackground.png</ImageSource>
+    <ImageSource x:Key="BasketBackground">C:\Users\Designeed\source\repos\WPF\FPC\FPC\Infrastructure\Backgrounds\Dark\BasketBackground.png</ImageSource>
+    <ImageSource x:Key="ProfileBackground">C:\Users\Designeed\source\repos\WPF\FPC\FPC\Infrastructure\Backgrounds\Dark\ProfileBackground.png</ImageSource>
 </ResourceDictionary>
