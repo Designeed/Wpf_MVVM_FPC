@@ -20,8 +20,8 @@ namespace FPC.Infrastructure.Styles.UserControl
     /// </summary>
     public partial class UCTextBox : UserControl
     {
-        public static readonly DependencyProperty TitleProperty = DependencyProperty.Register("title", typeof(string), typeof(UCTextBox), new PropertyMetadata(string.Empty));
-        public static readonly DependencyProperty FieldTextProperty = DependencyProperty.Register("text", typeof(string), typeof(UCTextBox), new FrameworkPropertyMetadata(string.Empty, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
+        public static readonly DependencyProperty TitleProperty = DependencyProperty.Register("title", typeof(string), typeof(UCTextBox), new PropertyMetadata("Заголовок"));
+        public static readonly DependencyProperty FieldTextProperty = DependencyProperty.Register("text", typeof(string), typeof(UCTextBox), new FrameworkPropertyMetadata("Поле ввода", FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 
         public string Title
         {
