@@ -3,7 +3,7 @@
 
     <Style x:Key="ProfileButton" TargetType="Button">
 
-        <Setter Property="Background" Value="{DynamicResource BackgroundMainBrush}"/>
+        <Setter Property="Background" Value="{DynamicResource PageBrush}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -13,7 +13,7 @@
                         Width="115"
                         CornerRadius="100"
                         BorderThickness="1"
-                        Background="{DynamicResource BackgroundMainBrush}"
+                        Background="{TemplateBinding Background}"
                         BorderBrush="{DynamicResource WhiteBlackBrush}">
 
                         <ContentPresenter
