@@ -20,32 +20,32 @@ namespace FPC.Infrastructure.Styles.UserControl
     /// </summary>
     public partial class UCCard : System.Windows.Controls.UserControl
     {
-        private static readonly DependencyProperty _path = DependencyProperty.Register("ImagePath", typeof(string), typeof(UCCard), new FrameworkPropertyMetadata(@"D:\Пользователи\Загрузки\Фоточки\Default.png", FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
-        private static readonly DependencyProperty _title = DependencyProperty.Register("Title", typeof(string), typeof(UCCard), new FrameworkPropertyMetadata("Название", FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
-        private static readonly DependencyProperty _description = DependencyProperty.Register("Description", typeof(string), typeof(UCCard), new FrameworkPropertyMetadata("Описание", FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
-        private static readonly DependencyProperty _cost = DependencyProperty.Register("Cost", typeof(string), typeof(UCCard), new FrameworkPropertyMetadata("0", FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
+        private static readonly DependencyProperty _pathProperty = DependencyProperty.Register("ImagePath", typeof(string), typeof(UCCard), new FrameworkPropertyMetadata(@"D:\Пользователи\Загрузки\Фоточки\Default.png", FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
+        private static readonly DependencyProperty _titleProperty = DependencyProperty.Register("Title", typeof(string), typeof(UCCard), new FrameworkPropertyMetadata("Название", FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
+        private static readonly DependencyProperty _descriptionProperty = DependencyProperty.Register("Description", typeof(string), typeof(UCCard), new FrameworkPropertyMetadata("Описание", FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
+        private static readonly DependencyProperty _costProperty = DependencyProperty.Register("Cost", typeof(string), typeof(UCCard), new FrameworkPropertyMetadata("0", FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
         
         public string ImagePath
         {
-            get => (string)GetValue(_path);
-            set => SetValue(_path, value);
+            get => (string)GetValue(_pathProperty);
+            set => SetValue(_pathProperty, value);
         }
         public string Title
         {
-            get => (string)GetValue(_title);
-            set => SetValue(_title, value);
+            get => (string)GetValue(_titleProperty);
+            set => SetValue(_titleProperty, value);
         }
 
         public string Desctirpion
         {
-            get => (string)GetValue(_description);
-            set => SetValue(_description, value);
+            get => (string)GetValue(_descriptionProperty);
+            set => SetValue(_descriptionProperty, value);
         }
 
         public string Cost
         {
-            get => (string)GetValue(_cost);
-            set => SetValue(_cost, value);
+            get => (string)GetValue(_costProperty);
+            set => SetValue(_costProperty, value);
         }  
 
         public UCCard()

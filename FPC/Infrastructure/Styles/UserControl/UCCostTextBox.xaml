@@ -36,7 +36,7 @@
                                         x:Name="hint"
                                         VerticalAlignment="Center"
                                         TextAlignment="Left"
-                                        Text="{Binding Text, RelativeSource={RelativeSource AncestorType=local:UCCostTextBox}}"
+                                        Text="{Binding Hint, RelativeSource={RelativeSource AncestorType=local:UCCostTextBox}}"
                                         Foreground="#CCCCCC"
                                         IsHitTestVisible="False"
                                         Visibility="Collapsed"/>

@@ -9,12 +9,12 @@ namespace FPC.Infrastructure.Styles.UserControl
     /// </summary>
     public partial class UCCostTextBox : System.Windows.Controls.UserControl
     {
-        private static readonly DependencyProperty FieldTextProperty = DependencyProperty.Register("text", typeof(string), typeof(UCCostTextBox), new FrameworkPropertyMetadata("Поле ввода", FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
+        private static readonly DependencyProperty _hintProperty = DependencyProperty.Register("Hint", typeof(string), typeof(UCCostTextBox), new FrameworkPropertyMetadata("Поле ввода", FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 
-        public string Text
+        public string Hint
         {
-            get => (string)GetValue(FieldTextProperty);
-            set => SetValue(FieldTextProperty, value);
+            get => (string)GetValue(_hintProperty);
+            set => SetValue(_hintProperty, value);
         }
 
         public UCCostTextBox()
