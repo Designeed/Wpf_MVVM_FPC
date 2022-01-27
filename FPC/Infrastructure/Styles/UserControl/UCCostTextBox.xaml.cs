@@ -9,7 +9,7 @@ namespace FPC.Infrastructure.Styles.UserControl
     /// </summary>
     public partial class UCCostTextBox : System.Windows.Controls.UserControl
     {
-        public static readonly DependencyProperty FieldTextProperty = DependencyProperty.Register("text", typeof(string), typeof(UCCostTextBox), new FrameworkPropertyMetadata("Поле ввода", FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
+        private static readonly DependencyProperty FieldTextProperty = DependencyProperty.Register("text", typeof(string), typeof(UCCostTextBox), new FrameworkPropertyMetadata("Поле ввода", FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 
         public string Text
         {
