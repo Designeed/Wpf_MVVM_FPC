@@ -41,8 +41,8 @@
                         <Expander Style="{StaticResource DefaultExpander}" Header="Цена" Background="AliceBlue">
                             <Grid Margin="-20, 5, 0, 0">
                                 <StackPanel HorizontalAlignment="Left">
-                                    <uc:UCCostTextBox Text="Мин. цена" TabIndex="1" Margin="0, 0, 0, 5"/>
-                                    <uc:UCCostTextBox Text="Макс. цена" TabIndex="2" Margin="0, 0, 0, 0"/>
+                                    <uc:UCCostTextBox Hint="Мин. цена" TabIndex="1" Margin="0, 0, 0, 5"/>
+                                    <uc:UCCostTextBox Hint="Макс. цена" TabIndex="2" Margin="0, 0, 0, 0"/>
                                 </StackPanel>
                             </Grid>
                         </Expander>
