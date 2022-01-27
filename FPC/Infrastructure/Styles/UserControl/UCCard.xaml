@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="FPC.Infrastructure.Styles.UserControl.UCCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FPC.Infrastructure.Styles.UserControl"
+             mc:Ignorable="d">
+    <Border
+        x:Name="MainBorder"
+        Background="{DynamicResource BackgroundMainBrush}"
+        BorderBrush="{DynamicResource WhiteBlackBrush}"
+        MinWidth="670"
+        Width="1434"
+        Height="240"
+        BorderThickness="1"
+        CornerRadius="35"
+        Padding="20">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Source="{Binding ImagePath, RelativeSource={RelativeSource AncestorType=local:UCCard}}" Stretch="Fill" Width="185" Height="197" Grid.Column="0">
+                <Image.Clip>
+                    <RectangleGeometry RadiusX="20" RadiusY="20" Rect="0, 0, 185, 197"/>
+                </Image.Clip>
+            </Image>
+
+            <StackPanel Orientation="Vertical" Grid.Column="1" HorizontalAlignment="Left">
+                <TextBlock 
+                       FontSize="46"
+                       FontFamily="{DynamicResource BaseFont}"
+                       FontWeight="Regular"
+                       Foreground="{DynamicResource WhiteBlackBrush}"
+                       Margin="20, 0, 0, 5"
+                       TextWrapping="Wrap"
+                       Text="{Binding Title, RelativeSource={RelativeSource AncestorType=local:UCCard}}"/>
+                
+                <TextBlock
+                       FontSize="27"
+                       FontFamily="{DynamicResource BaseFont}"
+                       FontWeight="Light"
+                       Foreground="{DynamicResource WhiteBlackBrush}"
+                       Margin="20, 0, 0, 0"
+                       TextWrapping="Wrap"
+                       Text="{Binding Description, RelativeSource={RelativeSource AncestorType=local:UCCard}}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="20, 0, 0, 0"  Grid.Column="2">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock
+                       FontSize="28"
+                       FontWeight="Light"
+                       FontFamily="{DynamicResource BaseFont}"
+                       Foreground="{DynamicResource WhiteBlackBrush}"
+                       Margin="0, 30, 0, 15"  
+                       Text="{Binding Cost, RelativeSource={RelativeSource AncestorType=local:UCCard}}"/>
+
+                    <TextBlock 
+                       FontSize="28"
+                       FontWeight="Light"
+                       FontFamily="{DynamicResource BaseFont}"
+                       Foreground="{DynamicResource WhiteBlackBrush}"
+                       Margin="0, 30, 0, 15"
+                       Text=" ₽"/>
+                </StackPanel>
+
+                <Button Style="{StaticResource DefaultButton}" 
+                        Width="160" 
+                        Height="60" 
+                        Content="Купить" 
+                        HorizontalAlignment="Right"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>
