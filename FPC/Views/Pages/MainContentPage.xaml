@@ -8,7 +8,7 @@
       mc:Ignorable="d" 
       Title="MainContentPage">
 
-    <Grid>
+    <Grid Margin="59, 0, 100, 124">
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
             <Border x:Name="LeftBar" 
                 BorderBrush="{DynamicResource WhiteBlackBrush}"
