@@ -22,8 +22,9 @@ namespace FPC.Infrastructure.Styles.UserControl
     {
         private static readonly DependencyProperty _pathProperty = DependencyProperty.Register("ImagePath", typeof(string), typeof(UCCard), new FrameworkPropertyMetadata(@"D:\Пользователи\Загрузки\Фоточки\Default.png", FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
         private static readonly DependencyProperty _titleProperty = DependencyProperty.Register("Title", typeof(string), typeof(UCCard), new FrameworkPropertyMetadata("Название", FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
-        private static readonly DependencyProperty _descriptionProperty = DependencyProperty.Register("Description", typeof(string), typeof(UCCard), new FrameworkPropertyMetadata("Описание", FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
+        private static readonly DependencyProperty _descriptionProperty = DependencyProperty.Register("Description", typeof(string), typeof(UCCard), new FrameworkPropertyMetadata(string.Empty, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
         private static readonly DependencyProperty _costProperty = DependencyProperty.Register("Cost", typeof(string), typeof(UCCard), new FrameworkPropertyMetadata("0", FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
+        private static readonly DependencyProperty _visibility = DependencyProperty.Register("VisibilityProp", typeof(string), typeof(UCCard), new FrameworkPropertyMetadata("Visible", FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
         
         public string ImagePath
         {
@@ -46,6 +47,12 @@ namespace FPC.Infrastructure.Styles.UserControl
         {
             get => (string)GetValue(_costProperty);
             set => SetValue(_costProperty, value);
+        }  
+        
+        public string VisibilityProp
+        {
+            get => (string)GetValue(_visibility);
+            set => SetValue(_visibility, value);
         }  
 
         public UCCard()
