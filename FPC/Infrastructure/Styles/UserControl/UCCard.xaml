@@ -9,9 +9,6 @@
         x:Name="MainBorder"
         Background="{DynamicResource BackgroundMainBrush}"
         BorderBrush="{DynamicResource WhiteBlackBrush}"
-        MinWidth="670"
-        Width="1434"
-        Height="240"
         BorderThickness="1"
         CornerRadius="35"
         Padding="20">
@@ -72,7 +69,8 @@
                         Width="160" 
                         Height="60" 
                         Content="Купить" 
-                        HorizontalAlignment="Right"/>
+                        HorizontalAlignment="Right"
+                        Visibility="{Binding VisibilityProp, RelativeSource={RelativeSource AncestorType=local:UCCard}}"/>
             </StackPanel>
         </Grid>
     </Border>
