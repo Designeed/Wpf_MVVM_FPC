@@ -8,7 +8,7 @@
       mc:Ignorable="d" 
       Title="MainContentPage">
 
-    <Grid Margin="59, 0, 100, 124">
+    <Grid Margin="59, 42, 100, 124">
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
             <Border x:Name="LeftBar" 
                 BorderBrush="{DynamicResource WhiteBlackBrush}"
@@ -50,12 +50,13 @@
                 </StackPanel>
             </Border>
 
-            <StackPanel>
+            <Grid Margin="57, 0, 0, 0">
                 <ListView Background="Transparent" Height="754" BorderThickness="0" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.CanContentScroll="True">
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">
-                            <Setter Property="Margin" Value="57, 0, 0, 13"/>
+                            <Setter Property="Margin" Value="0, 0, 0, 8.4"/>
                             <Setter Property="Padding" Value="0"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
                         </Style>
                     </ListView.ItemContainerStyle>
 
@@ -67,11 +68,11 @@
 
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <uc:UCCard/>
+                            <uc:UCCard Width="1434" Height="240"/>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-            </StackPanel>
+            </Grid>
         </StackPanel>
 
 
