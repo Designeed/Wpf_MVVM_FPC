@@ -1,0 +1,92 @@
+﻿<Page x:Class="FPC.Views.Pages.BasketPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FPC.Views.Pages"
+        xmlns:uc="clr-namespace:FPC.Infrastructure.Styles.UserControl"
+        mc:Ignorable="d" Title="BasketPage">
+
+    <Grid HorizontalAlignment="Left" Margin="80, 20, 0, 0">
+        <StackPanel>
+            <StackPanel Margin="16, 0, 0, 20">
+                <TextBlock
+                Text="Корзина"
+                FontSize="60"
+                FontFamily="{StaticResource BaseFont}"
+                FontWeight="Regular"
+                Foreground="{DynamicResource WhiteBlackBrush}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="0, 0, 86, 0">
+                    <StackPanel>
+                        <ListView Background="Transparent" Height="754" BorderThickness="0" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.CanContentScroll="True">
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="Margin" Value="0, 0, 0, 9.5"/>
+                                    <Setter Property="Padding" Value="0"/>
+                                </Style>
+                            </ListView.ItemContainerStyle>
+
+                            <ListView.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel/>
+                                </ItemsPanelTemplate>
+                            </ListView.ItemsPanel>
+
+                            <ListView.Items>
+                                <uc:UCCard Width="880" VisibilityProp="Hidden"/>
+                                <uc:UCCard Width="880" VisibilityProp="Hidden"/>
+                                <uc:UCCard Width="880" VisibilityProp="Hidden"/>
+                                <uc:UCCard Width="880" VisibilityProp="Hidden"/>
+                                <uc:UCCard Width="880" VisibilityProp="Hidden"/>
+                                <uc:UCCard Width="880" VisibilityProp="Hidden"/>
+                            </ListView.Items>
+                        </ListView>
+                    </StackPanel>
+                </StackPanel>
+
+                <Border
+                    VerticalAlignment="Top"
+                    Width="779"
+                    Height="170"
+                    CornerRadius="35"
+                    BorderThickness="1"
+                    Padding="15"
+                    BorderBrush="{DynamicResource WhiteBlackBrush}"
+                    Background="{DynamicResource BackgroundMainBrush}">
+
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0, 0, 0, 20" >
+                            <TextBlock                
+                                Text="Итого: "
+                                FontSize="40"
+                                FontFamily="{StaticResource BaseFont}"
+                                FontWeight="Regular"
+                                Foreground="{DynamicResource WhiteBlackBrush}"/>
+
+                            <TextBlock  
+                                x:Name="TotalCost"
+                                Text="0"
+                                FontSize="40"
+                                FontFamily="{StaticResource BaseFont}"
+                                FontWeight="Regular"
+                                Foreground="{DynamicResource WhiteBlackBrush}"/>
+
+                            <TextBlock                
+                                Text=" ₽"
+                                FontSize="40"
+                                FontFamily="{StaticResource BaseFont}"
+                                FontWeight="Regular"
+                                Foreground="{DynamicResource WhiteBlackBrush}"/>
+                        </StackPanel>
+
+                        <Button Style="{DynamicResource DefaultButton}" Height="64" Content="Оформить заказ"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Page>

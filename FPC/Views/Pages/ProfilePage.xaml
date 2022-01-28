@@ -1,0 +1,119 @@
+﻿<Page x:Class="FPC.Views.Pages.ProfilePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FPC.Views.Pages"
+      xmlns:uc="clr-namespace:FPC.Infrastructure.Styles.UserControl"
+      mc:Ignorable="d" 
+      Title="ProfilePage">
+
+    <Grid HorizontalAlignment="Center">
+        <StackPanel>
+            <StackPanel x:Name="TopBar" Orientation="Horizontal">
+                <TextBlock
+                Text="FPC"
+                FontSize="100"
+                FontFamily="Bell MT"
+                FontWeight="Bold"
+                Foreground="{DynamicResource WhiteBlackBrush}" />
+
+                <Button Style="{StaticResource RedButton}" Content="Выход" Width="180"  Height="64" Margin="40, 0, 0, 0"/>
+                <Button Style="{StaticResource YellowButton}" Content="Назад" Width="180" Height="64" Margin="298, 0, 0, 0"/>
+            </StackPanel>
+
+            <Border x:Name="MiddleBar"
+                Width="895"
+                Height="156"
+                CornerRadius="35"
+                BorderThickness="1"
+                Margin="0, 30, 0, 30"
+                BorderBrush="{DynamicResource WhiteBlackBrush}"
+                Background="{DynamicResource BackgroundMainBrush}">
+
+                <Grid VerticalAlignment="Center" Margin="30, 0, 30, 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Style="{StaticResource ProfileButton}" IsEnabled="False" Content="{StaticResource Avatar}" Grid.Column="0"/>
+
+                    <StackPanel Grid.Column="1" Margin="25, 0, 0, 0">
+                        <TextBlock
+                            x:Name="Nickname"
+                            Text="Nickname"
+                            FontSize="40"
+                            FontFamily="{StaticResource BaseFont}"
+                            FontWeight="Regular"
+                            Foreground="{DynamicResource WhiteBlackBrush}"/>
+
+                        <TextBlock
+                            x:Name="FirstLastName"
+                            Text="FirstLastName"
+                            FontSize="40"
+                            FontFamily="{StaticResource BaseFont}"
+                            FontWeight="Regular"
+                            Foreground="{DynamicResource WhiteBlackBrush}"/>
+                    </StackPanel>
+
+                    <TextBlock
+                        x:Name="Role"
+                        Text="Role"
+                        FontSize="23"
+                        FontFamily="{StaticResource BaseFont}"
+                        FontWeight="Regular"
+                        Foreground="{DynamicResource WhiteBlackBrush}"
+                        Grid.Column="2"
+                        VerticalAlignment="Top"
+                        Margin="0, 10, 0, 0"/>
+                </Grid>
+            </Border>
+
+            <Border x:Name="BottomBar"
+                Width="895"
+                Height="669"
+                CornerRadius="35"
+                BorderThickness="1"
+                Padding="30, 30, 30, 15"
+                BorderBrush="{DynamicResource WhiteBlackBrush}"
+                Background="{DynamicResource BackgroundMainBrush}">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Orientation="Horizontal" Grid.Row="0">
+                        <StackPanel Margin="0, 0, 50, 0" >
+                            <uc:UCTextBox Title="Телефон" Hint="+7 777 777-77-77" Margin="0, 0, 0, 20" TabIndex="0"/>
+                            <uc:UCTextBox Title="Почта" Hint="mail@yandex.ru" Margin="0, 0, 0, 20" TabIndex="1"/>
+                            <uc:UCTextBox Title="Никнейм" Hint="User" Margin="0, 0, 0, 20" TabIndex="2"/>
+                            <uc:UCTextBox Title="Имя" Hint="Иван" Margin="0, 0, 0, 20" TabIndex="3"/>
+                            <uc:UCTextBox Title="Фамилия" Hint="Иванов" TabIndex="4"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical">
+                            <uc:UCTextBox Title="Дата рождения" Hint="ДД.ММ.ГГГГ" TabIndex="5"/>
+
+                            <TextBlock
+                            Text="Смена пароля:"
+                            FontSize="35"
+                            FontFamily="{StaticResource BaseFont}"
+                            FontWeight="Regular"
+                            Foreground="{DynamicResource WhiteBlackBrush}"
+                            Margin="0, 67, 0, 20"/>
+
+                            <uc:UCPasswordBox Header="Текущий пароль" Margin="0, 0, 0, 20" TabIndex="6"/>
+                            <uc:UCPasswordBox Header="Новый пароль" Margin="0, 0, 0, 20" TabIndex="7"/>
+                            <uc:UCPasswordBox Header="Повторите новый пароль" TabIndex="8"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <Button Style="{StaticResource DefaultButton}" Height="54" Grid.Row="1" Content="Сохранить" VerticalAlignment="Bottom"/>
+                </Grid>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>
