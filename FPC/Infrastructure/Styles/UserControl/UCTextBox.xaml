@@ -32,8 +32,26 @@
                                 BorderBrush="{DynamicResource WhiteBlackBrush}">
                                 <Grid>
                                     <ScrollViewer x:Name="PART_ContentHost" VerticalAlignment="Center"/>
+                                    
+                                    <TextBlock
+                                        x:Name="hint"
+                                        VerticalAlignment="Center"
+                                        TextAlignment="Left"
+                                        Text="{Binding Hint, RelativeSource={RelativeSource AncestorType=local:UCTextBox}}"
+                                        Foreground="#CCCCCC"
+                                        IsHitTestVisible="False"
+                                        Visibility="Collapsed"/>
                                 </Grid>
                             </Border>
+
+                            <ControlTemplate.Triggers>
+                                <MultiTrigger>
+                                    <MultiTrigger.Conditions>
+                                        <Condition Property="Text" Value=""/>
+                                    </MultiTrigger.Conditions>
+                                    <Setter TargetName="hint" Property="Visibility" Value="Visible"/>
+                                </MultiTrigger>
+                            </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </TextBox.Template>
                 </TextBox>
