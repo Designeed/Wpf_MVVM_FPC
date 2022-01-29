@@ -8,21 +8,10 @@
       mc:Ignorable="d" 
       Title="ProfilePage">
 
-    <Grid HorizontalAlignment="Center">
+    <Grid Margin="0, 0, 55, 0">
         <StackPanel>
-            <StackPanel x:Name="TopBar" Orientation="Horizontal">
-                <TextBlock
-                Text="FPC"
-                FontSize="100"
-                FontFamily="Bell MT"
-                FontWeight="Bold"
-                Foreground="{DynamicResource WhiteBlackBrush}" />
 
-                <Button Style="{StaticResource RedButton}" Content="Выход" Width="180"  Height="64" Margin="40, 0, 0, 0"/>
-                <Button Style="{StaticResource YellowButton}" Content="Назад" Width="180" Height="64" Margin="298, 0, 0, 0"/>
-            </StackPanel>
-
-            <Border x:Name="MiddleBar"
+            <Border x:Name="Top"
                 Width="895"
                 Height="156"
                 CornerRadius="35"
@@ -37,7 +26,7 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
-                    <Button Style="{StaticResource ProfileButton}" IsEnabled="False" Content="{StaticResource Avatar}" Grid.Column="0"/>
+                    <Button Style="{DynamicResource ProfileButton}" Content="{DynamicResource ProfileAvatar}" IsEnabled="False" Grid.Column="0"/>
 
                     <StackPanel Grid.Column="1" Margin="25, 0, 0, 0">
                         <TextBlock
@@ -66,13 +55,16 @@
                         Foreground="{DynamicResource WhiteBlackBrush}"
                         Grid.Column="2"
                         VerticalAlignment="Top"
+                        HorizontalAlignment="Right"
                         Margin="0, 10, 0, 0"/>
+
+                    <Button Style="{StaticResource DefaultButton}" Grid.Column="2" Content="Выход" Background="{DynamicResource RedBrush}" FontSize="20" VerticalAlignment="Bottom" Height="40" Width="100"/>
                 </Grid>
             </Border>
 
             <Border x:Name="BottomBar"
                 Width="895"
-                Height="669"
+                Height="650"
                 CornerRadius="35"
                 BorderThickness="1"
                 Padding="30, 30, 30, 15"
