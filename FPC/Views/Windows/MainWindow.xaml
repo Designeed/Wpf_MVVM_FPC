@@ -3,10 +3,46 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:FPC"
+        xmlns:uc="clr-namespace:FPC.Infrastructure.Styles.UserControl" 
+        xmlns:vm="clr-namespace:FPC.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="1080" Width="1920" WindowState="Maximized">
 
+    <Window.DataContext>
+        <vm:MainViewModel/>
+    </Window.DataContext>
+
+    <Grid Background="{DynamicResource PageBrush}">
+
+        <Image Width="1900" Source="{DynamicResource MainBackground}"/>
+
+        <StackPanel Orientation="Vertical">
+            <StackPanel x:Name="TopBar" Orientation="Horizontal" VerticalAlignment="Top" Margin="96, 37, 0, 0" Visibility="{Binding VisibleState}">
+                <TextBlock
+                Text="FPC"
+                FontSize="100"
+                FontFamily="Bell MT"
+                FontWeight="Bold"
+                Foreground="{DynamicResource WhiteBlackBrush}"
+                Cursor="Hand">
+                    <TextBlock.InputBindings>
+                        <MouseBinding Command="{Binding ChangeViewCommand}" CommandParameter="MainPage" MouseAction="LeftClick" />
+                    </TextBlock.InputBindings>
+                </TextBlock>
+
+                <TextBox Style="{StaticResource SearchTextBox}" 
+                         TabIndex="0" 
+                         Width="996" 
+                         MinWidth="500" 
+                         Margin="95, 0, 30, 0"/>
+                <Button Style="{StaticResource ImageTextButton}" Command="{Binding ChangeViewCommand}" CommandParameter="BasketPage" Margin="0, 0, 45, 0" IsTabStop="False"/>
+                <Button Style="{DynamicResource ProfileButton}" Command="{Binding ChangeViewCommand}" CommandParameter="ProfilePage"  Content="{DynamicResource Avatar}" IsTabStop="False"/>
+            </StackPanel>
+
+            <Frame
+                NavigationUIVisibility="Hidden"
+                Content="{Binding CurrentPage}"/>
+
+        </StackPanel>
     </Grid>
 </Window>
