@@ -4,24 +4,31 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FPC.Views.Pages"
+        xmlns:vm="clr-namespace:FPC.ViewModels"
         xmlns:uc="clr-namespace:FPC.Infrastructure.Styles.UserControl"
         mc:Ignorable="d" Title="BasketPage">
 
     <Grid HorizontalAlignment="Left" Margin="80, 20, 0, 0">
         <StackPanel>
-            <StackPanel Margin="16, 0, 0, 20">
+            <Grid Margin="16, 0, 0, 20" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
                 <TextBlock
-                Text="Корзина"
-                FontSize="60"
-                FontFamily="{StaticResource BaseFont}"
-                FontWeight="Regular"
-                Foreground="{DynamicResource WhiteBlackBrush}"/>
-            </StackPanel>
+                    Text="Корзина"
+                    FontSize="60"
+                    FontFamily="{StaticResource BaseFont}"
+                    FontWeight="Regular"
+                    Foreground="{DynamicResource WhiteBlackBrush}"
+                    Grid.Column="0"/>
+            </Grid>
 
             <StackPanel Orientation="Horizontal">
                 <StackPanel Margin="0, 0, 86, 0">
                     <StackPanel>
-                        <ListView Background="Transparent" Height="754" BorderThickness="0" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.CanContentScroll="True">
+                        <ListView Background="Transparent" Width="880" Height="754" BorderThickness="0" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.CanContentScroll="True">
                             <ListView.ItemContainerStyle>
                                 <Style TargetType="ListViewItem">
                                     <Setter Property="Margin" Value="0, 0, 0, 9.5"/>
@@ -35,14 +42,11 @@
                                 </ItemsPanelTemplate>
                             </ListView.ItemsPanel>
 
-                            <ListView.Items>
-                                <uc:UCCard Width="880" VisibilityProp="Hidden"/>
-                                <uc:UCCard Width="880" VisibilityProp="Hidden"/>
-                                <uc:UCCard Width="880" VisibilityProp="Hidden"/>
-                                <uc:UCCard Width="880" VisibilityProp="Hidden"/>
-                                <uc:UCCard Width="880" VisibilityProp="Hidden"/>
-                                <uc:UCCard Width="880" VisibilityProp="Hidden"/>
-                            </ListView.Items>
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <uc:UCCard Width="880" VisibilityProp="Hidden"/>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
                         </ListView>
                     </StackPanel>
                 </StackPanel>
