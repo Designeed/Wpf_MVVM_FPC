@@ -50,6 +50,13 @@
             </Grid>
         </Viewbox>
     </Grid>
-    
-    
+
+    <Grid x:Key="ProfileAvatar">
+        <Viewbox Margin="5" Stretch="Uniform">
+            <Grid>
+                <Path Data="M27.879,27.879A10.939,10.939,0,1,0,16.939,16.939,10.936,10.936,0,0,0,27.879,27.879Zm0,5.47C20.577,33.349,6,37.013,6,44.288v5.47H49.758v-5.47C49.758,37.013,35.181,33.349,27.879,33.349Z" Fill="{StaticResource WhiteBlackBrush}"/>
+            </Grid>
+        </Viewbox>
+    </Grid>
+
 </ResourceDictionary>
