@@ -18,9 +18,9 @@ namespace FPC.Views.Pages
     /// <summary>
     /// Логика взаимодействия для MainContentPage.xaml
     /// </summary>
-    public partial class ProductPage : Page
+    public partial class MainContentPage : Page
     {
-        public ProductPage()
+        public MainContentPage()
         {
             InitializeComponent();
         }
