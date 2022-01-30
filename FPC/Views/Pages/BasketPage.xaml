@@ -4,7 +4,6 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FPC.Views.Pages"
-        xmlns:vm="clr-namespace:FPC.ViewModels"
         xmlns:uc="clr-namespace:FPC.Infrastructure.Styles.UserControl"
         mc:Ignorable="d" Title="BasketPage">
 
