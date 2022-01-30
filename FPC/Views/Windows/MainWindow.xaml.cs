@@ -1,7 +1,7 @@
 ﻿using FPC.ViewModels;
 using System.Windows;
 
-namespace FPC
+namespace FPC.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
