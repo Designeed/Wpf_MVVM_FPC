@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-
 namespace FPC.ViewModels
 {
     class MainViewModel : ViewModel
@@ -95,7 +94,7 @@ namespace FPC.ViewModels
 
         public MainViewModel()
         {
-            _mainContentPage = new MainContentPage();
+            _mainContentPage = new ProductPage();
             _basketPage = new BasketPage();
             _profilePage = new ProfilePage();
 
